@@ -1,11 +1,11 @@
 package org.example;
 
-public class Paciente {
+public class Paciente implements Comparable<Paciente> {
     private String nombre;
     private String sintoma;
     private char codigo;
 
-    public Paciente (String nombre, String sintoma, char codigo ){
+    public Paciente(String nombre, String sintoma, char codigo) {
         this.nombre = nombre;
         this.sintoma = sintoma;
         this.codigo = codigo;
@@ -24,13 +24,12 @@ public class Paciente {
     }
 
     @Override
-    public  int compareTo(Paciente otro ){
+    public int compareTo(Paciente otro) {
         return Character.compare(this.codigo, otro.codigo);
-
     }
 
     @Override
-    public String ToString (){
-        return nombre + "," + sintoma + "," + codigo ;
+    public String toString() {
+        return nombre + "," + sintoma + "," + codigo;
     }
 }
